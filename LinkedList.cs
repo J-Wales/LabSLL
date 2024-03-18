@@ -13,6 +13,7 @@ namespace LabSLL
 		public Node? Head {  get; private set; }
 		public Node? Tail { get; private set; }
 
+		// Creates the initializer for LinkedList
 		public LinkedList()
 		{
 			Head = null;
@@ -20,6 +21,7 @@ namespace LabSLL
 			Count = 0;
 		}
 
+		// Creates the AddFirst method
 		public void AddFirst(string value)
 		{
 			Node newNode = new Node(value);
@@ -38,6 +40,7 @@ namespace LabSLL
             Count++;
 		}
 
+		// Creates the AddLast method
 		public void AddLast(string value)
 		{
 			Node newNode = new Node(value);
@@ -56,6 +59,7 @@ namespace LabSLL
 			Count++;
 		}
 
+		// Creates the RemoveFirst method
 		public void RemoveFirst()
 		{
 			if (Head != null)
@@ -69,21 +73,11 @@ namespace LabSLL
 
 				Count--;
 			}
-			else
-			{
-				Console.WriteLine("List is empty.");
-			}
-			
 		}
 
+		// Created the RemoveLast method
 		public void RemoveLast()
 		{
-			if (Head == null)
-			{
-				Console.WriteLine("List is empty");
-				return;
-			}
-
 			if (Head.Next == null)
 			{
 				Head = null;
@@ -104,6 +98,7 @@ namespace LabSLL
 			Count--;
 		}
 
+		// Creates the GetValue method
 		public string? GetValue(int index)
 		{
 			Node current = Head;
