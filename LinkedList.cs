@@ -7,9 +7,9 @@ using System.Threading.Tasks;
 
 namespace LabSLL
 {
-	public class LinkedList
+	public class LinkedList<T>
 	{
-		public int Count { get; set; }
+		public int Count { get; private set; }
 		public Node? Head {  get; private set; }
 		public Node? Tail { get; private set; }
 
@@ -104,7 +104,7 @@ namespace LabSLL
 			Count--;
 		}
 
-		public Node GetValue(int index)
+		public string? GetValue(int index)
 		{
 			Node current = Head;
 
@@ -113,7 +113,7 @@ namespace LabSLL
 				current = current.Next;
 			}
 
-			return current;
+			return current.Data;
 		}
 	}
 }
